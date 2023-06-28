@@ -4,7 +4,7 @@
   "description": "",
   "publisher": "marina",
   "repository": "https://github.com/mavdotjs/stock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -19,7 +19,7 @@
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "stock",
+      "language": "stockLanguage",
       "scopeName": "source.stock",
       "path": "./syntaxes/stock.tmLanguage.json"
     }]
