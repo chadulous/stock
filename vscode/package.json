@@ -1,7 +1,9 @@
 {
   "name": "stocklanguage",
-  "displayName": "stock",
+  "displayName": "Stock Language Highlighting",
   "description": "",
+  "publisher": "marina",
+  "repository": "https://github.com/mavdotjs/stock",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
