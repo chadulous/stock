@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "cliffy>command": "https://deno.land/x/cliffy@v0.25.7/command/mod.ts",
+    "permissions": "https://deno.land/std@0.192.0/permissions/mod.ts"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "stocklanguage",
+  "displayName": "stock",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "stockLanguage",
+      "aliases": ["Stock", "stock"],
+      "extensions": [".st", ".stock"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "stock",
+      "scopeName": "source.stock",
+      "path": "./syntaxes/stock.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Stock",
+	"patterns": [
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#instructions"
+		},
+		{
+			"include": "#semicolons"
+		}
+	],
+	"repository": {
+		"functions": {
+			"patterns": [
+				{
+					"name": "meta.function.stock",
+					"begin": "\\b([A-Za-z]+)(\\|)",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.operator.stock"
+						},
+						"2": {
+							"name": "punctuation.definition.block.stock"
+						}
+					},
+					"end": "(\\|)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.stock"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#numbers"
+						},
+						{
+							"include": "#comments"
+						},
+						{
+							"include": "#instructions"
+						},
+						{
+							"include": "#semicolons"
+						}
+					]
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.stock",
+					"match": "`.*$"
+				}
+			]
+		},
+		"instructions": {
+			"patterns": [
+				{
+					"name": "keyword.control.stock",
+					"match": "\\b(pop|inc|dec|add|sub|mult|div|mod|clone|switch|cloneup|reverse|len|out.num|out.str|eq|not)\\b"
+				},
+				{
+					"name": "meta.function-call.stock",
+					"match": "\\b(call\\.)([A-Za-z]+)\\b",
+					"captures": {
+						"1": {
+							"name": "constant.other.stock"
+						},
+						"2": {
+							"name": "keyword.operator.stock"
+						}
+					}
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.stock",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"semicolons": {
+			"patterns": [
+				{
+					"name": "punctuation.terminator.statement.stock",
+					"match": ";"
+				}
+			]
+		}
+	},
+	"scopeName": "source.stock"
+}
